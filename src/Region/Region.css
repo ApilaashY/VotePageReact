@@ -1,0 +1,26 @@
+.races {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    gap: 10px;
+}
+
+.races .race {
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    aspect-ratio: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.races a {
+    text-decoration: none;
+}
+
+.races .race h2 {
+    text-align: center;
+}

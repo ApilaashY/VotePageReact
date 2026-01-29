@@ -1,0 +1,247 @@
+.race-container {
+    padding: 2em;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nominees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5em;
+    width: 100%;
+}
+
+.nominee-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.nominee-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.winner-card {
+    border: 2px solid #ffd700;
+    background: linear-gradient(to bottom right, #fff, #fffae6);
+}
+
+.winner-badge {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: #ffd700;
+    color: #856404;
+    padding: 0.25em 0.75em;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nominee-header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.nominee-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.nominee-info h2 {
+    margin: 0;
+    font-size: 1.25em;
+    color: #2d3748;
+}
+
+.nominee-ward {
+    margin: 0.25em 0 0 0;
+    color: #718096;
+    font-size: 0.9em;
+}
+
+.nominee-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    font-size: 0.95em;
+    color: #4a5568;
+}
+
+.detail-row a {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.detail-row a:hover {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+.detail-icon {
+    font-size: 1.1em;
+    width: 24px;
+    text-align: center;
+}
+
+.nominee-socials {
+    display: flex;
+    gap: 0.75em;
+    margin-top: auto;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #edf2f7;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s;
+    font-size: 0.9em;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+.social-link.twitter:hover { background-color: #1da1f2; }
+.social-link.facebook:hover { background-color: #1877f2; }
+.social-link.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-link.linkedin:hover { background-color: #0077b5; }
+
+.section-container {
+    margin-top: 3em;
+    width: 100%;
+}
+
+.section-header {
+    font-size: 1.5em;
+    color: #2d3748;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.events-grid, .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5em;
+    width: 100%;
+}
+
+.event-card, .media-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover, .media-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+    display: inline-block;
+    background-color: #ebf8ff;
+    color: #3182ce;
+    padding: 0.25em 0.75em;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-bottom: 0.5em;
+}
+
+.event-title, .media-title {
+    margin: 0;
+    font-size: 1.15em;
+    color: #2d3748;
+}
+
+.event-description, .media-description {
+    color: #718096;
+    font-size: 0.95em;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.media-link {
+    display: inline-block;
+    margin-top: 1em;
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.media-link:hover {
+    text-decoration: underline;
+}
+
+.worksheet-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 1000;
+    transition: all 0.2s;
+    border: 2px solid white;
+}
+
+.worksheet-fab:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    color: white;
+}

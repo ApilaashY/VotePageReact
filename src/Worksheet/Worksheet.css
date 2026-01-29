@@ -1,0 +1,173 @@
+.worksheet-container {
+    max-width: 1600px;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.worksheet-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #333;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.worksheet-title {
+    font-size: 2rem;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.worksheet-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.control-btn:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    border-color: #94a3b8;
+}
+
+.worksheet-race-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9fafb;
+}
+
+.worksheet-race-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+    border-bottom: 1px solid #cbd5e0;
+    padding-bottom: 0.5rem;
+}
+
+.worksheet-nominees-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 1.5rem;
+}
+
+.worksheet-nominee-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.nominee-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.nominee-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nominee-link {
+    font-size: 0.9rem;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background-color: #eff6ff;
+}
+
+.nominee-link:hover {
+    background-color: #dbeafe;
+    text-decoration: none;
+}
+
+.worksheet-note-area {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    resize: vertical;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+.worksheet-note-area:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.no-nominees {
+    color: #718096;
+    font-style: italic;
+}
+
+@media print {
+    .worksheet-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .worksheet-header-row {
+        border-bottom: 2px solid #000;
+        margin-bottom: 1rem;
+    }
+
+    .worksheet-controls {
+        display: none;
+    }
+    
+    .worksheet-race-section {
+        break-inside: avoid;
+        border: 1px solid #000;
+        background-color: white;
+        margin-bottom: 1rem;
+    }
+
+    .worksheet-nominees-list {
+        display: block; /* Stack vertically for print usually better */
+    }
+
+    .worksheet-nominee-item {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    .worksheet-note-area {
+        border: 1px solid #ccc;
+        background-color: white;
+        min-height: 100px; 
+    }
+}

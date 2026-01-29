@@ -1,0 +1,10 @@
+.home main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+}
+
+.home h1 {
+  font-weight: 400;
+}
