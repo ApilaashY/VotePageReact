@@ -1,16 +1,49 @@
-# React + Vite
+# VoteDemo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to Run the Project
 
-Currently, two official plugins are available:
+1.  **Install Dependencies**
+    Open your terminal in the project directory and run:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    ```bash
+    npm install
+    ```
 
-## React Compiler
+2.  **Start the Development Server**
+    To run the app in development mode:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    ```bash
+    npm run dev
+    ```
 
-## Expanding the ESLint configuration
+3.  **Build for Production**
+    To create a production build:
+    ```bash
+    npm run build
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Folder Structure
+
+### `public/`
+
+Contains static assets and data files utilized by the application.
+
+- `WardBoundaries.geojson`: GeoJSON file defining ward boundaries for the map.
+- `events.csv`: Dataset containing event information.
+- `media.csv`: Dataset containing media-related information.
+- `municipality-map.csv`: Mapping data for municipalities.
+- `nominees.csv`: Dataset containing nominee information.
+- `vite.svg`: Vite logo asset.
+
+### `src/`
+
+Contains the source code for the React application.
+
+- `MapSection/`: Components responsible for rendering and interacting with the map.
+- `Navbar/`: Components for the application's navigation bar.
+- `Race/`: Components for displaying election race details.
+- `Region/`: Components for handling and displaying region-specific data.
+- `Worksheet/`: Components related to worksheet functionality.
+- `App.jsx`: The main root component of the application.
+- `main.jsx`: The entry point that mounts the React application.
+- `App.css` & `index.css`: Global and component-specific styles.
