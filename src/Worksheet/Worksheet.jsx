@@ -62,7 +62,7 @@ export default function Worksheet() {
         });
         
         // Escape quotes in note
-        const safeNote = `"${notes[id].replace(/"/g, '""')}"`;
+        const safeNote = `"${notes[id].replace("\"", '\"\"')}"`;
         csvContent += `${id},"${name}",${safeNote}\n`;
     });
 
@@ -191,7 +191,7 @@ export default function Worksheet() {
   return (
     <div className="worksheet-container">
       <div className="worksheet-header-row">
-        <h1 className="worksheet-title">Worksheet for {ward.replace(/-/g, " ")}</h1>
+        <h1 className="worksheet-title">Worksheet for {ward.replace("-", " ")}</h1>
         <div className="worksheet-controls">
             <button className="control-btn" onClick={handleExport}>Export Notes</button>
             <button className="control-btn" onClick={handleImportClick}>Import Notes</button>
@@ -208,7 +208,7 @@ export default function Worksheet() {
       {Object.entries(groupedNominees).map(([raceId, nominees]) => (
         <div key={raceId} id={raceId} className="worksheet-race-section">
           <h2 className="worksheet-race-title">
-            {raceId.replace(/-/g, " ").replace("SchoolBoard", "School Board")}
+            {raceId.replace("-", " ").replace("SchoolBoard", "School Board")}
           </h2>
           {nominees.length > 0 ? (
             <div className="worksheet-nominees-list">
